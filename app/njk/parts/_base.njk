@@ -1,0 +1,29 @@
+{% set company = "My random company" %}
+	{% if not(title) %}
+{% set title = "Default title" %}
+{% endif %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    {% include "parts/header.njk" %}
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <img src="img/test.jpg"></img>
+    {% include "parts/footer.njk" %}
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="bundle/app.js"></script>
+</body>
+</html>
